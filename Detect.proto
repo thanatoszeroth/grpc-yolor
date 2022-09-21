@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message DetectRequest {
+    string Base64Image = 1;
+}
+
+message DetectResponse{
+    string JsonString = 1; 
+}
+
+service DetectHandler {
+    rpc YOLORDetector (DetectRequest) returns (DetectResponse) {}
+}
